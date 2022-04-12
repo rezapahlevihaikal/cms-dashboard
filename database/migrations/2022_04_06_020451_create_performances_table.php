@@ -6,9 +6,9 @@ use Illuminate\Support\Facades\Schema;
 
 class CreatePerformancesTable extends Migration
 {
-    /**
+    /**  sss
      * Run the migrations.
-     *
+     *  
      * @return void
      */
     public function up()
