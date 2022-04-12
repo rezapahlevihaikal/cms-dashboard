@@ -73,7 +73,7 @@
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Bulan</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="bulan" value="" selected="">
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="bulan" value="{{ $dataPerformance->bulan }}">
                                         <option value="Januari">Januari</option>
                                         <option value="Februari">Februari</option>
                                         <option value="Maret">Maret</option>
@@ -90,7 +90,7 @@
                                 </div>
                                 <div class="col">
                                     <p>Tahun</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="tahun" value="" selected="">
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="tahun" value="{{ $dataPerformance->tahun }}" selected="">
                                         <option value="2022">2022</option>
                                         <option value="2023">2023</option>
                                         <option value="2024">2024</option>
