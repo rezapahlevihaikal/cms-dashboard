@@ -110,7 +110,7 @@
                     <tbody>
                         @foreach ($dataDeals as $item)
                             <tr style="text-align: center">
-                                <td title="{{$item->Name}}">{!! Str::limit($item->Name, 20) !!}</td>
+                                <td title="{{$item->Name}}">{{ \Illuminate\Support\Str::limit($item->Name, 30, '...') }}</td>
                                 <td>{{$item->Team}}</td>
                                 <td>{{$item->Owner_Fullname}}</td>
                                 <td>Rp {{$item->Size}}</td>

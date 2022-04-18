@@ -119,22 +119,22 @@
                     <tbody>
                         @foreach ($dataCompanies as $item)
                             <tr style="text-align: center">
-                                <td title="{{$item->name}}">{!! Str::limit($item->name, 20) !!}</td>
-                                <td>{{$item->owner_name}}</td>
-                                <td>{{$item->owner_username}}</td>
-                                <td>{{$item->team}}</td>
-                                <td>{{$item->creator_name}}</td>
-                                <td>{{$item->creator_username}}</td>
-                                <td>{{$item->website}}</td>
-                                <td>{{$item->phone_number}}</td>
-                                <td>{{$item->address}}</td>
-                                <td>{{$item->city}}</td>
-                                <td>{{$item->province}}</td>
-                                <td>{{$item->zipcode}}</td>
-                                <td>{{$item->type}}</td>
-                                <td>{{$item->deal}}</td>
-                                <td>{{$item->contact}}</td>
-                                <td>{{$item->nama_Dirut}}</td>
+                                <td title="{{$item->Name}}">{{ \Illuminate\Support\Str::limit($item->Name, 30, '...') }}</td>
+                                <td>{{$item->Owner_Name}}</td>
+                                <td>{{$item->Owner_Username}}</td>
+                                <td>{{$item->Team}}</td>
+                                <td>{{$item->Creator_Name}}</td>
+                                <td>{{$item->Creator_Username}}</td>
+                                <td>{{$item->Website}}</td>
+                                <td>{{$item->Phone_Number}}</td>
+                                <td>{{$item->Address}}</td>
+                                <td>{{$item->City}}</td>
+                                <td>{{$item->Province}}</td>
+                                <td>{{$item->Zipcode}}</td>
+                                <td>{{$item->Type}}</td>
+                                <td>{{$item->Deal}}</td>
+                                <td>{{$item->Contact}}</td>
+                                <td>{{$item->Nama_Dirut}}</td>
                             </tr>
                         @endforeach
                     </tbody>

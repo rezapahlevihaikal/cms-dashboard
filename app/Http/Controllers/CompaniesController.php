@@ -8,6 +8,7 @@ use Carbon\Carbon;
 use App\Models\Companies;
 use App\Imports\CompaniesImport;
 use Maatwebsite\Excel\Facades\Excel;
+use Illuminate\Support\Str;
 
 class CompaniesController extends Controller
 {
@@ -21,7 +22,7 @@ class CompaniesController extends Controller
         $dataCompanies = DB::table('companies')
         ->select('*')
         ->get();
-        
+        // $dataCompanies->Name = Str::limit($dataCompanies->Name, 30); W
         return view('companies.index', compact('dataCompanies'));
     }
 

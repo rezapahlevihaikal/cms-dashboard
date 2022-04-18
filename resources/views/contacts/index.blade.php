@@ -111,7 +111,7 @@
                     <tbody>
                         @foreach ($dataContact as $item)
                             <tr style="text-align: center">
-                                <td title="{{$item->First_Name}}">{!! Str::limit($item->First_Name, 30) !!}</td>
+                                <td title="{{$item->First_Name}}">{{ \Illuminate\Support\Str::limit($item->First_Name, 30, '...') }}</td>
                                 <td>{{$item->Last_Name}}</td>
                                 <td>{{$item->Owner_Name}}</td>
                                 <td>{{$item->Owner_Username}}</td>
