@@ -15,6 +15,7 @@ class Performances extends Model
     [
         'divisi',
         'core_bisnis',
+        'target',
         'pencapaian',
         'bulan',
         'tahun'

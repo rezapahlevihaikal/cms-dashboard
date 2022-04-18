@@ -124,6 +124,7 @@ class PerformanceController extends Controller
             $dataPerformance->update([
                 'divisi' => $request->divisi,
                 'core_bisnis' => $request->core_bisnis,
+                'target' => $request->target,
                 'pencapaian' => $request->pencapaian,
                 'bulan' => $request->bulan,
                 'tahun' => $request->tahun

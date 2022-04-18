@@ -4,8 +4,10 @@
     <title>Dashboard</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
-    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+
 </head>
 <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
     <div class="container">
@@ -36,6 +38,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('performance') }}">Performance</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">CRM</a>
+                    <div class="dropdown-menu">
+                        <a href="{{ route('companies') }}" class="dropdown-item">Companies</a>
+                        <a href="{{ route('contacts') }}" class="dropdown-item">Contacts</a>
+                        <a href="{{ route('deals') }}" class="dropdown-item">Deals</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('signout') }}">Logout</a>

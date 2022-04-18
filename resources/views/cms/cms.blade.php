@@ -8,6 +8,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </head>
 <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
     <div class="container">
@@ -38,6 +41,14 @@
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('performance') }}">Performance</a>
+                </li>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">CRM</a>
+                    <div class="dropdown-menu">
+                        <a href="{{ route('companies') }}" class="dropdown-item">Companies</a>
+                        <a href="{{ route('contacts') }}" class="dropdown-item">Contacts</a>
+                        <a href="{{ route('deals') }}" class="dropdown-item">Deals</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('signout') }}">Logout</a>

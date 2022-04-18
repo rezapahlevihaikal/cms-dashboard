@@ -66,6 +66,10 @@
                                     <input class="form-control" type="text" name="core_bisnis"/>
                                 </div>
                                 <div class="col">
+                                    <p>Target</p>
+                                    <input class="form-control" type="text" name="target"/>
+                                </div>
+                                <div class="col">
                                     <p>Pencapaian</p>
                                     <input type="text" class="form-control" name="pencapaian">
                                 </div>

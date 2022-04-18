@@ -8,7 +8,9 @@ use App\Http\Controllers\ChartController;
 use App\Http\Controllers\CmsController;
 use App\Http\Controllers\EventsController;
 use App\Http\Controllers\PerformanceController;
-
+use App\Http\Controllers\CompaniesController;
+use App\Http\Controllers\ContactController;
+use App\Http\Controllers\DealsController;
 
 /*
 |--------------------------------------------------------------------------
@@ -74,6 +76,22 @@ Route::prefix('performance')->group(function () {
     Route::post('update/{id}', [PerformanceController::class, 'update'])->name('performance.update');
     Route::post('delete/{id}', [PerformanceController::class, 'destroy'])->name('performance.destroy');
 });
+
+Route::prefix('contacts')->group(function(){
+    Route::get('/', [ContactController::class, 'index'])->name('contacts');
+    Route::post('importContact', [ContactController::class, 'importContactXls'])->name('contacts.import');
+});
+
+Route::prefix('deals')->group(function(){
+    Route::get('/', [DealsController::class, 'index'])->name('deals');
+    Route::post('importDeals', [DealsController::class, 'importDealsXls'])->name('deals.import');
+});
+
+Route::prefix('companies')->group(function(){
+    Route::get('/', [CompaniesController::class, 'index'])->name('companies');
+    Route::post('importCompanies', [CompaniesController::class, 'importCompaniesXls'])->name('companies.import');
+});
+
 
 
 
