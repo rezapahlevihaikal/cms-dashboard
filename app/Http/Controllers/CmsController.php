@@ -16,7 +16,7 @@ class CmsController extends Controller
     {
         if(Auth::check())
         {
-            $dataCms = DB::table('web_ranks')
+            $dataCms = DB::table('web_rank')
             ->select('*')
             ->get();
             return view('cms.cms', compact('dataCms'));

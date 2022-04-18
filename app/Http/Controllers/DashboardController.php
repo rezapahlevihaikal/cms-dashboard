@@ -13,7 +13,7 @@ class DashboardController extends Controller
     public function dashboard()
     {
         if(Auth::check()){
-            $wartaEkonomi = DB::table('web_ranks')
+            $wartaEkonomi = DB::table('web_rank')
                             ->select('tanggal', 'we')
                             ->get();
 
@@ -23,7 +23,7 @@ class DashboardController extends Controller
             }
 
 
-            $herStory = DB::table('web_ranks')
+            $herStory = DB::table('web_rank')
                         ->select('tanggal', 'hs')
                         ->get();
 
@@ -34,7 +34,7 @@ class DashboardController extends Controller
             }
 
 
-            $populis = DB::table('web_ranks')
+            $populis = DB::table('web_rank')
                         ->select('tanggal', 'populis')
                         ->get();
 
@@ -44,7 +44,7 @@ class DashboardController extends Controller
                 $rankPop[] = $key->populis;
             }
 
-            $topRanks = DB::table('web_ranks')
+            $topRanks = DB::table('web_rank')
                         ->select('we', 'hs', 'populis', 'tanggal')
                         ->orderBy('tanggal','desc')
                         ->first();
