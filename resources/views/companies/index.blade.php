@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CMS Alexa</title>
+    <title>Companies Data</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
@@ -120,7 +120,7 @@
                     <tbody>
                         @foreach ($dataCompanies as $item)
                             <tr style="text-align: center">
-                                <td title="{{$item->Name}}">{{ \Illuminate\Support\Str::limit($item->Name, 30, '...') }}</td>
+                                <td title="">{{ \Illuminate\Support\Str::limit($item->Name, 30, '...') }}</td>
                                 <td>{{$item->Owner_Name}}</td>
                                 <td>{{$item->Owner_Username}}</td>
                                 <td>{{$item->Team}}</td>
