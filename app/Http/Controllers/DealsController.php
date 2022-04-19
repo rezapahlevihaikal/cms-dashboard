@@ -6,6 +6,7 @@ use Illuminate\Http\Request;
 use DB;
 use Carbon\Carbon;
 use App\Models\Deals;
+use App\Models\DealsAdd;
 use App\Imports\DealsImport;
 use Maatwebsite\Excel\Facades\Excel;
 
@@ -32,69 +33,29 @@ class DealsController extends Controller
         return redirect()->back()->with('success', 'All good!');
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
-    public function create()
+    public function indexDealsAdd()
     {
-        //
+        $dataDealsAdd = DB::table('deals_add')
+        ->select('*')
+        ->get();
+        return view('dealsAdd.index', compact('dataDealsAdd'));
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
-    public function store(Request $request)
+    public function storeDealsAdd(Request $request)
     {
-        //
-    }
+        $validator = DealsAdd::create([
+            'name' => $request->name,
+            'size' => $request->size,
+            'tanggal' => $request->tanggal
+        ]);
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function show($id)
-    {
-        //
-    }
-
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
-    {
-        //
-    }
-
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
-    {
-        //
-    }
-
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        if($validator)
+        {
+            return redirect('deals')->with('success','Data Berhasil ditambah');
+        }
+        else
+        {
+            return redirect()->route('dealsAdd.index')->with('error','Data Gagal Diinput');
+        }
     }
 }

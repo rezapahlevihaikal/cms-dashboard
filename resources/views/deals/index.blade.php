@@ -48,6 +48,7 @@
                         <a href="{{ route('companies') }}" class="dropdown-item">Companies</a>
                         <a href="{{ route('contacts') }}" class="dropdown-item">Contacts</a>
                         <a href="{{ route('deals') }}" class="dropdown-item">Deals</a>
+                        <a href="{{ route('dealsAdd') }}" class="dropdown-item">Deals Add</a>
                     </div>
                 </li>
                 <li class="nav-item">
@@ -113,7 +114,7 @@
                                 <td title="{{$item->Name}}">{{ \Illuminate\Support\Str::limit($item->Name, 30, '...') }}</td>
                                 <td>{{$item->Team}}</td>
                                 <td>{{$item->Owner_Fullname}}</td>
-                                <td>Rp {{$item->Size}}</td>
+                                <td>Rp {{number_format($item->Size)}}</td>
                                 <td>{{$item->Stage}}</td>
                                 <td>{{$item->Company}}</td>
                                 <td>{{$item->Products}}</td>

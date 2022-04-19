@@ -62,8 +62,44 @@
 <body>
     <div class="container">
         <div class="bs-example" style="padding: 10px">
-            <div class="d-grid gap-2 d-md-flex justify-content-md-end">
-                <button onclick="window.location='{{url('performance/addPerformance')}}'" class="btn btn-primary" type="button">Tambah Data</button>
+             <!-- Button trigger modal -->
+             <div class="d-grid gap-2 d-md-flex justify-content-md-end">
+                <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                    Tambah Data
+                </button>
+            </div>
+            
+            <!-- Modal -->
+            <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog">
+                    <form method="post" action="{{ route('dealsAdd.store') }}" enctype="multipart/form-data">
+                        <div class="modal-content">
+                            <div class="modal-header">
+                                <h5 class="modal-title" id="exampleModalLabel">Tambah Data Deals</h5>
+                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                            </div>
+                            <div class="modal-body">
+                                @csrf
+                                <label>Nama</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="name" required="required">
+                                </div>
+                                <label>Size</label>
+                                <div class="form-group">
+                                    <input type="text" class="form-control" name="size" required="required">
+                                </div>
+                                <label>Tanggal</label>
+                                <div class="form-group">
+                                    <input type="date" class="form-control" name="tanggal" required="required">
+                                </div>
+                            </div>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                <button type="submit" class="btn btn-primary">Import</button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
             </div>
         </div>
         <div class="row">
@@ -71,33 +107,17 @@
                 <table id="example" class="table table-striped nowrap" style="width:100%">
                     <thead>
                         <tr style="text-align: center">
-                            <th>Divisi</th>
-                            <th>Core Bisnis</th>
-                            <th>Target</th>
-                            <th>Pencapaian</th>
-                            <th>Value</th>
-                            <th>Bulan</th>
-                            <th>Tahun</th>
-                            <th>Actions</th>
+                            <th>Nama</th>
+                            <th>Size</th>
+                            <th>Tanggal</th>
                         </tr>
                     </thead>
                     <tbody>
-                        @foreach ($dataPerformance as $item)
+                        @foreach ($dataDealsAdd as $item)
                             <tr style="text-align: center">
-                                <td><a href="{{ route('performance.edit', $item->id) }}">{{$item->divisi}}</a></td>
-                                <td>{{$item->core_bisnis}}</td>
-                                <td>{{$item->target}}</td>
-                                <td>{{$item->pencapaian}}</td>
-                                <td>{{$item->value}}</td>
-                                <td>{{$item->bulan}}</td>
-                                <td>{{$item->tahun}}</td>
-                                <td>
-                                    <form action="{{ route('performance.destroy', $item->id) }}" method="post">
-                                        @csrf
-                                        @method('post')
-                                       <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">Hapus</button>
-                                    </form>
-                                </td>
+                                <td>{{$item->name}}</td>
+                                <td>Rp {{number_format($item->size)}}</td>
+                                <td>{{$item->tanggal}}</td>
                             </tr>
                         @endforeach
                     </tbody>

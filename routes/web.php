@@ -92,6 +92,12 @@ Route::prefix('companies')->group(function(){
     Route::post('importCompanies', [CompaniesController::class, 'importCompaniesXls'])->name('companies.import');
 });
 
+Route::prefix('dealsAdd')->group(function(){
+    Route::get('/', [DealsController::class, 'indexDealsAdd'])->name('dealsAdd');
+    Route::post('addDealsAdd', [DealsController::class, 'storeDealsAdd'])->name('dealsAdd.store');
+});
+
+
 
 
 
