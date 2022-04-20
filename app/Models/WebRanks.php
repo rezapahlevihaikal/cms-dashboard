@@ -9,6 +9,8 @@ class WebRanks extends Model
 {
     use HasFactory;
 
+    protected $table = 'web_rank';
+
     protected $fillable = [
         'tanggal',
         'we', 
