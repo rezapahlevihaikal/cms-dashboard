@@ -59,25 +59,25 @@
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Divisi</p>
-                                    <input class="form-control" type="text" name="divisi"/>
+                                    <input class="form-control" type="text" name="divisi" required/>
                                   </div>    
                                 <div class="col">
                                     <p>Core Bisnis</p>
-                                    <input class="form-control" type="text" name="core_bisnis"/>
+                                    <input class="form-control" type="text" name="core_bisnis" required/>
                                 </div>
                                 <div class="col">
                                     <p>Target</p>
-                                    <input class="form-control" type="text" name="target"/>
+                                    <input class="form-control" type="text" name="target" required/>
                                 </div>
                                 <div class="col">
                                     <p>Pencapaian</p>
-                                    <input type="text" class="form-control" name="pencapaian">
+                                    <input type="text" class="form-control" name="pencapaian" required>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Bulan</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="bulan" value="" selected="">
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="bulan" value="" selected="" required>
                                         <option value="Januari">Januari</option>
                                         <option value="Februari">Februari</option>
                                         <option value="Maret">Maret</option>

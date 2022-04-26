@@ -59,34 +59,34 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p>Tanggal</p>
-                                    <input id="startDate" class="form-control" type="date" name="tanggal"/>
+                                    <input id="startDate" class="form-control" type="date" name="tanggal" required/>
                                     <span id="dateSelected"></span>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Start Time</p>
-                                    <input id="startDate" class="form-control" type="time" name="start_time"/>
+                                    <input id="startDate" class="form-control" type="time" name="start_time" required/>
                                   </div>    
                                 <div class="col">
                                     <p>Finish Time</p>
-                                    <input id="startDate" class="form-control" type="time" name="finish_time"/>
+                                    <input id="startDate" class="form-control" type="time" name="finish_time" required/>
                                 </div>
                                 <div class="col">
                                     <p>Venue</p>
-                                    <input type="text" class="form-control" name="venue">
+                                    <input type="text" class="form-control" name="venue" required>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Deskripsi</p>
-                                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" name="deskripsi"></textarea>
+                                    <textarea class="form-control rounded-0" id="exampleFormControlTextarea2" rows="3" name="deskripsi" required></textarea>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <label for="demo_overview_minimal">Kategori</label>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="kategori">
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="kategori" required>
                                         <option value="Award">Award</option>
                                         <option value="Seminar">Seminar</option>
                                         <option value="Client Services">Client Service</option>
@@ -95,7 +95,7 @@
                                 </div>
                                 <div class="col">
                                     <label for="demo_overview_minimal">PIC</label>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="pic">
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="pic" required>
                                         <option value="WE">WE</option>
                                         <option value="HS">HS</option>
                                         <option value="Pop">POP</option>

@@ -60,52 +60,44 @@
                             <div class="row">
                                 <div class="col-12">
                                     <p>Tanggal</p>
-                                    <input id="startDate" class="form-control" type="date" name="tanggal"/>
+                                    <input id="startDate" class="form-control" type="date" name="tanggal" required/>
                                     <span id="dateSelected"></span>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Warta Ekonomi</p>
-                                    <input type="text" class="form-control" aria-label="" name="we">
+                                    <input type="text" class="form-control" aria-label="" name="we" required>
                                   </div>    
                                 <div class="col">
                                     <p>HerStory</p>
-                                    <input type="text" class="form-control" aria-label="" name="hs">
+                                    <input type="text" class="form-control" aria-label="" name="hs" required>
                                 </div>
                                 <div class="col">
                                   <p>Populis</p>
-                                  <input type="text" class="form-control" aria-label="" name="populis">
-                                </div>
-                                <div class="col">
-                                    <p>Topcore</p>
-                                    <input type="text" class="form-control" aria-label="" name="topcore">
+                                  <input type="text" class="form-control" aria-label="" name="populis" required>
                                 </div>
                                 <div class="col">
                                     <p>Warta Ekonomi TV</p>
-                                    <input type="text" class="form-control" aria-label="" name="we_tv">
+                                    <input type="text" class="form-control" aria-label="" name="we_tv" required>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                   <p>WE Nilai</p>
-                                  <input type="text" class="form-control" aria-label="" name="we_nilai">
+                                  <input type="text" class="form-control" aria-label="" name="we_nilai" required>
                                 </div>
                                 <div class="col">
                                     <p>HS Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="hs_nilai">
+                                    <input type="text" class="form-control" aria-label="" name="hs_nilai" required>
                                 </div>
                                 <div class="col">
                                     <p>Populis Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="populis_nilai">
-                                </div>
-                                <div class="col">
-                                    <p>Topcore Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="tc_nilai">
+                                    <input type="text" class="form-control" aria-label="" name="populis_nilai" required>
                                 </div>
                                 <div class="col">
                                     <p>WE TV Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="tv_nilai">
+                                    <input type="text" class="form-control" aria-label="" name="tv_nilai" required>
                                 </div>
                             </div>
                             <div class="form-group">

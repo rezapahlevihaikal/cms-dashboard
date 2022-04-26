@@ -75,12 +75,10 @@
                             <th>Warta Ekonomi</th>
                             <th>HerStory</th>
                             <th>Populis</th>
-                            <th>Topcore</th>
                             <th>WE Tv</th>
                             <th>Nilai (WE)</th>
                             <th>Nilai (HS)</th>
                             <th>Nilai (Populis)</th>
-                            <th>Nilai (Topcore)</th>
                             <th>Nilai (WE TV)</th>
                             <th>Last Update</th>
                             <th>Actions</th>
@@ -93,12 +91,10 @@
                                 <td>{{$item->we}}</td>
                                 <td>{{$item->hs}}</td>
                                 <td>{{$item->populis}}</td>
-                                <td>{{$item->topcore}}</td>
                                 <td>{{$item->we_tv}}</td>
                                 <td>{{$item->we_nilai}}</td>
                                 <td>{{$item->hs_nilai}}</td>
                                 <td>{{$item->populis_nilai}}</td>
-                                <td>{{$item->tc_nilai}}</td>
                                 <td>{{$item->tv_nilai}}</td>
                                 <td>{{$item->lastupdate}}</td>
                                 <td>
