@@ -73,24 +73,15 @@
                                     <p>Pencapaian</p>
                                     <input type="text" class="form-control" name="pencapaian" required>
                                 </div>
+                                <div class="col">
+                                    <p>Value</p>
+                                    <input type="text" class="form-control" name="value" required>
+                                </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Bulan</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="bulan" value="" selected="" required>
-                                        <option value="Januari">Januari</option>
-                                        <option value="Februari">Februari</option>
-                                        <option value="Maret">Maret</option>
-                                        <option value="April">April</option>
-                                        <option value="Mei">Mei</option>
-                                        <option value="Juni">Juni</option>
-                                        <option value="Juli">Juli</option>
-                                        <option value="Agustus">Agustus</option>
-                                        <option value="September">September</option>
-                                        <option value="OKtober">Oktober</option>
-                                        <option value="November">November</option>
-                                        <option value="Desember">Desember</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="bulan" required>
                                 </div>
                                 <div class="col">
                                     <p>Tahun</p>
