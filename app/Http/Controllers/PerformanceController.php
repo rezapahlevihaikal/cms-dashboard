@@ -55,7 +55,9 @@ class PerformanceController extends Controller
             $request->validate([
                 'divisi'=>'required',
                 'core_bisnis'=>'required',
+                'target' => 'required',
                 'pencapaian'=>'required',
+                'value' => 'required',
                 'bulan'=>'required',
                 'tahun'=>'required',
             ]);
@@ -63,7 +65,9 @@ class PerformanceController extends Controller
                 $performance = new Performances();
                 $performance->divisi = $request->divisi;
                 $performance->core_bisnis = $request->core_bisnis;
+                $performance->target = $request->target;
                 $performance->pencapaian = $request->pencapaian;
+                $performance->value = $request->value;
                 $performance->bulan = $request->bulan;
                 $performance->tahun = $request->tahun;
                 $performance->save();
@@ -126,6 +130,7 @@ class PerformanceController extends Controller
                 'core_bisnis' => $request->core_bisnis,
                 'target' => $request->target,
                 'pencapaian' => $request->pencapaian,
+                'value' => $request->value,
                 'bulan' => $request->bulan,
                 'tahun' => $request->tahun
             ]);
