@@ -4,7 +4,6 @@
     <title>Tambah Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 </head>
 <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
@@ -57,56 +56,49 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header">Tambah Data</div>
+                    <div class="card-header">Tambah Data Rank - Youtube</div>
                     <div class="card-body">
-                        <form action="{{route('cms.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('storeYoutube')}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-12">
-                                    <p>Tanggal</p>
-                                    <input id="startDate" class="form-control" type="date" name="tanggal" required/>
-                                    <span id="dateSelected"></span>
-                                </div>
-                            </div>
-                            <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Warta Ekonomi</p>
-                                    <input type="text" class="form-control" aria-label="" name="we" required>
-                                  </div>    
+                                    <input id="startDate" class="form-control" type="text" name="yt_we_rank" required/>
+                                </div>
                                 <div class="col">
                                     <p>HerStory</p>
-                                    <input type="text" class="form-control" aria-label="" name="hs" required>
+                                    <input id="startDate" class="form-control" type="text" name="yt_hs_rank" required/>
                                 </div>
                                 <div class="col">
-                                  <p>Populis</p>
-                                  <input type="text" class="form-control" aria-label="" name="populis" required>
+                                    <p>Populis</p>
+                                    <input id="startDate" class="form-control" type="text" name="yt_populis_rank" required/>
                                 </div>
                                 <div class="col">
-                                    <p>Warta Ekonomi TV</p>
-                                    <input type="text" class="form-control" aria-label="" name="we_tv" required>
+                                    <p>Konten Jatim</p>
+                                    <input id="startDate" class="form-control" type="text" name="yt_konten_jatim_rank" required/>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
-                                  <p>WE Nilai</p>
-                                  <input type="text" class="form-control" aria-label="" name="we_nilai" required>
+                                    <p>Warta Ekonomi (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="yt_we_nilai" required/>
                                 </div>
                                 <div class="col">
-                                    <p>HS Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="hs_nilai" required>
+                                    <p>HerStory (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="yt_hs_nilai" required/>
                                 </div>
                                 <div class="col">
-                                    <p>Populis Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="populis_nilai" required>
+                                    <p>Populis (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="yt_populis_nilai" required/>
                                 </div>
                                 <div class="col">
-                                    <p>WE TV Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="tv_nilai" required>
+                                    <p>Konten Jatim (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="yt_konten_jatim_nilai" required/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <br>
-                                <button onclick="window.location='{{url('/cms')}}'" class="btn btn-outline-success" type="button" >Back</button>
+                                <button onclick="window.location='{{url('/socialmedia-ranks')}}'" class="btn btn-outline-success" type="button" >Back</button>
                                 <button type="submit" class="btn btn-outline-primary">Submit</button>
                             </div>
                         </form>
@@ -116,4 +108,4 @@
         </div>
     </div>
 </body>
-</html> 
+</html>

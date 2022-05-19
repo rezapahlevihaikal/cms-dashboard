@@ -26,8 +26,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cms') }}">CMS Alexa</a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ranks</a>
+                            <div class="dropdown-menu">
+                                <a href="{{ route('cms') }}" class="dropdown-item">Smiliarweb Rank</a>
+                                <a href="{{ route('indexRanks') }}" class="dropdown-item">Social Media</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('events') }}">Events</a>
@@ -57,50 +61,61 @@
                         <form action="{{ route('performance.update', $dataPerformance->id) }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row" style="padding-top: 10px">
-                                <div class="col">
-                                    <p>Divisi</p>
-                                    <input class="form-control" type="text" name="divisi" value="{{ $dataPerformance->divisi }}"/>
-                                  </div>    
-                                <div class="col">
-                                    <p>Core Bisnis</p>
-                                    <input class="form-control" type="text" name="core_bisnis" value="{{ $dataPerformance->core_bisnis }}"/>
+                                <div class="row" style="padding-top: 10px">
+                                    <div class="col">
+                                        <p>Divisi</p>
+                                        <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="divisi" name="divisi" value="" selected="">
+                                            <option value="">Pilih Divisi</option>
+                                            <option value="WE">WE</option>
+                                            <option value="HS">HS</option>
+                                            <option value="POPULIS">POPULIS</option>
+                                            <option value="Q1">Q1</option>
+                                        </select>
+                                      </div>    
+                                    <div class="col">
+                                        <p>Core Bisnis</p>
+                                        <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="core_bisnis" name="core_bisnis" value="" selected="">
+                                            <option value="">Pilih Core Bisnis</option>
+                                            <option value="Iklan WE">Iklan WE</option>
+                                            <option value="Award WE">Award WE</option>
+                                            <option value="Seminar Banking">Seminar Banking</option>
+                                            <option value="Programatic WE">Programatic WE</option>
+                                            <option value="WEA">WEA</option>
+                                            <option value="Iklan HS">Iklan HS</option>
+                                            <option value="Award HS">Award HS</option>
+                                            <option value="Seminar HS">Seminar HS</option>
+                                            <option value="Programatic HS">Programatic HS</option>
+                                            <option value="Programatic Populis">Programatic Populis</option>
+                                            <option value="Q1 Revitalisasi">Q1 Revitalisasi</option>
+                                            <option value="Q1 Ide">Q1 Ide</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <p>Target</p>
+                                        <input class="form-control" type="text" name="target" value="{{$dataPerformance->target}}" required/>
+                                    </div>
                                 </div>
-                                <div class="col">
-                                    <p>Target</p>
-                                    <input type="text" class="form-control" name="target" value="{{ $dataPerformance->target }}">
-                                </div>
-                                <div class="col">
-                                    <p>Pencapaian</p>
-                                    <input type="text" class="form-control" name="pencapaian" value="{{ $dataPerformance->pencapaian }}">
-                                </div>
-                            </div>
-                            <div class="row" style="padding-top: 10px">
-                                <div class="col">
-                                    <p>Bulan</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="bulan" value="{{ $dataPerformance->bulan }}">
-                                        <option value="Januari">Januari</option>
-                                        <option value="Februari">Februari</option>
-                                        <option value="Maret">Maret</option>
-                                        <option value="April">April</option>
-                                        <option value="Mei">Mei</option>
-                                        <option value="Juni">Juni</option>
-                                        <option value="Juli">Juli</option>
-                                        <option value="Agustus">Agustus</option>
-                                        <option value="September">September</option>
-                                        <option value="OKtober">Oktober</option>
-                                        <option value="November">November</option>
-                                        <option value="Desember">Desember</option>
-                                    </select>
-                                </div>
-                                <div class="col">
-                                    <p>Tahun</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="tahun" value="{{ $dataPerformance->tahun }}" selected="">
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                    </select>
+                                <div class="row" style="padding-top: 10px">
+                                    <div class="col">
+                                        <p>Pencapaian</p>
+                                        <input type="text" class="form-control" name="pencapaian" value="{{$dataPerformance->pencapaian}}" required>
+                                    </div>
+                                    <div class="col">
+                                        <p>Value</p>
+                                        <input type="text" class="form-control" name="value" value="{{$dataPerformance->value}}" required>
+                                    </div>
+                                    <div class="col">
+                                        <p>Tanggal</p>
+                                        <input type="text" class="form-control" name="tanggal" value="{{$dataPerformance->tanggal}}" required>
+                                    </div>
+                                    <div class="col">
+                                        <p>Bulan</p>
+                                        <input type="text" class="form-control" name="bulan" value="{{$dataPerformance->bulan}}" required>
+                                    </div>
+                                    <div class="col">
+                                        <p>Tahun</p>
+                                        <input type="text" class="form-control" name="tahun" value="{{$dataPerformance->tahun}}" required>
+                                    </div>
                                 </div>
                             </div>
                             <div class="form-group">

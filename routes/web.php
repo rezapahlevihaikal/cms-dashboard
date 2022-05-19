@@ -11,6 +11,7 @@ use App\Http\Controllers\PerformanceController;
 use App\Http\Controllers\CompaniesController;
 use App\Http\Controllers\ContactController;
 use App\Http\Controllers\DealsController;
+use App\Http\Controllers\SocialMediaController;
 
 /*
 |--------------------------------------------------------------------------
@@ -67,7 +68,7 @@ Route::prefix('events')->group(function(){
     Route::post('delete/{id}', [EventsController::class, 'destroy'])->name('events.destroy');
 });
 
-
+//=========================== Performance ===========================
 Route::prefix('performance')->group(function () {
     Route::get('/', [PerformanceController::class, 'index'])->name('performance');
     Route::get('addPerformance', [PerformanceController::class, 'create'])->name('addPerformance');
@@ -77,27 +78,48 @@ Route::prefix('performance')->group(function () {
     Route::post('delete/{id}', [PerformanceController::class, 'destroy'])->name('performance.destroy');
 });
 
+
+//================================ Contacts =============================
 Route::prefix('contacts')->group(function(){
     Route::get('/', [ContactController::class, 'index'])->name('contacts');
     Route::post('importContact', [ContactController::class, 'importContactXls'])->name('contacts.import');
 });
 
+//================================ Deals ==============================
 Route::prefix('deals')->group(function(){
     Route::get('/', [DealsController::class, 'index'])->name('deals');
     Route::post('importDeals', [DealsController::class, 'importDealsXls'])->name('deals.import');
 });
 
+//================================= Companies ==========================
 Route::prefix('companies')->group(function(){
     Route::get('/', [CompaniesController::class, 'index'])->name('companies');
     Route::post('importCompanies', [CompaniesController::class, 'importCompaniesXls'])->name('companies.import');
 });
 
+//================================== Deals Add ==========================
 Route::prefix('dealsAdd')->group(function(){
     Route::get('/', [DealsController::class, 'indexDealsAdd'])->name('dealsAdd');
     Route::post('addDealsAdd', [DealsController::class, 'storeDealsAdd'])->name('dealsAdd.store');
 });
 
+//==================================== Social Media ============================
+Route::get('/socialmedia-ranks', [SocialMediaController::class, 'index'])->name('indexRanks');
 
+Route::prefix('youtube')->group(function(){
+    Route::get('addYoutubeRanks', [SocialMediaController::class, 'addYoutube'])->name('addYoutube');
+    Route::post('storeYoutubeRanks', [SocialMediaController::class, 'storeYoutube'])->name('storeYoutube');
+});
+
+Route::prefix('tiktok')->group(function(){
+    Route::get('addTiktokRanks', [SocialMediaController::class, 'addTiktok'])->name('addTiktok');
+    Route::post('storeTiktokRanks', [SocialMediaController::class, 'storeTiktok'])->name('storeTiktok');
+});
+
+Route::prefix('instagram')->group(function(){
+    Route::get('addInstagramRanks', [SocialMediaController::class, 'addInstagram'])->name('addInstagram');
+    Route::post('storeInstagramRanks', [SocialMediaController::class, 'storeInstagram'])->name('storeInstagram');
+});
 
 
 

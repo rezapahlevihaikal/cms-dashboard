@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>CMS Alexa</title>
+    <title>Smiliarweb Rank</title>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/5.0.1/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
@@ -33,8 +33,12 @@
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="{{ route('cms') }}">CMS Alexa</a>
+                <li class="nav-item dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ranks</a>
+                    <div class="dropdown-menu">
+                        <a href="{{ route('cms') }}" class="dropdown-item">Smiliarweb Rank</a>
+                        <a href="{{ route('indexRanks') }}" class="dropdown-item">Social Media</a>
+                    </div>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="{{ route('events') }}">Events</a>
@@ -75,11 +79,9 @@
                             <th>Warta Ekonomi</th>
                             <th>HerStory</th>
                             <th>Populis</th>
-                            <th>WE Tv</th>
                             <th>Nilai (WE)</th>
                             <th>Nilai (HS)</th>
                             <th>Nilai (Populis)</th>
-                            <th>Nilai (WE TV)</th>
                             <th>Last Update</th>
                             <th>Actions</th>
                         </tr>
@@ -91,11 +93,9 @@
                                 <td>{{$item->we}}</td>
                                 <td>{{$item->hs}}</td>
                                 <td>{{$item->populis}}</td>
-                                <td>{{$item->we_tv}}</td>
                                 <td>{{$item->we_nilai}}</td>
                                 <td>{{$item->hs_nilai}}</td>
                                 <td>{{$item->populis_nilai}}</td>
-                                <td>{{$item->tv_nilai}}</td>
                                 <td>{{$item->lastupdate}}</td>
                                 <td>
                                     <form action="{{route('cms.destroy', $item->id)}}" method="post">

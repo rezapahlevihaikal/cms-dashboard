@@ -26,8 +26,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cms') }}">CMS Alexa</a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ranks</a>
+                            <div class="dropdown-menu">
+                                <a href="{{ route('cms') }}" class="dropdown-item">Smiliarweb Rank</a>
+                                <a href="{{ route('indexRanks') }}" class="dropdown-item">Social Media</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('events') }}">Events</a>
@@ -52,23 +56,45 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header">Tambah Data</div>
+                    <div class="card-header">Tambah Data Performance</div>
                     <div class="card-body">
                         <form action="{{ route('performance.store') }}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Divisi</p>
-                                    <input class="form-control" type="text" name="divisi" required/>
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="divisi" name="divisi" value="" selected="">
+                                        <option value="">Pilih Divisi</option>
+                                        <option value="WE">WE</option>
+                                        <option value="HS">HS</option>
+                                        <option value="POPULIS">POPULIS</option>
+                                        <option value="Q1">Q1</option>
+                                    </select>
                                   </div>    
                                 <div class="col">
                                     <p>Core Bisnis</p>
-                                    <input class="form-control" type="text" name="core_bisnis" required/>
+                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="core_bisnis" name="core_bisnis" value="" selected="">
+                                        <option value="">Pilih Core Bisnis</option>
+                                        <option value="Iklan WE">Iklan WE</option>
+                                        <option value="Award WE">Award WE</option>
+                                        <option value="Seminar Banking">Seminar Banking</option>
+                                        <option value="Programatic WE">Programatic WE</option>
+                                        <option value="WEA">WEA</option>
+                                        <option value="Iklan HS">Iklan HS</option>
+                                        <option value="Award HS">Award HS</option>
+                                        <option value="Seminar HS">Seminar HS</option>
+                                        <option value="Programatic HS">Programatic HS</option>
+                                        <option value="Programatic Populis">Programatic Populis</option>
+                                        <option value="Q1 Revitalisasi">Q1 Revitalisasi</option>
+                                        <option value="Q1 Ide">Q1 Ide</option>
+                                    </select>
                                 </div>
                                 <div class="col">
                                     <p>Target</p>
                                     <input class="form-control" type="text" name="target" required/>
                                 </div>
+                            </div>
+                            <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Pencapaian</p>
                                     <input type="text" class="form-control" name="pencapaian" required>
@@ -77,21 +103,17 @@
                                     <p>Value</p>
                                     <input type="text" class="form-control" name="value" required>
                                 </div>
-                            </div>
-                            <div class="row" style="padding-top: 10px">
+                                <div class="col">
+                                    <p>Tanggal</p>
+                                    <input type="text" class="form-control" name="tanggal" required>
+                                </div>
                                 <div class="col">
                                     <p>Bulan</p>
                                     <input type="text" class="form-control" name="bulan" required>
                                 </div>
                                 <div class="col">
                                     <p>Tahun</p>
-                                    <select id="demo_overview_minimal" class="form-control" data-role="select-dropdown" data-profile="minimal" name="tahun" value="" selected="">
-                                        <option value="2022">2022</option>
-                                        <option value="2023">2023</option>
-                                        <option value="2024">2024</option>
-                                        <option value="2025">2025</option>
-                                        <option value="2026">2026</option>
-                                    </select>
+                                    <input type="text" class="form-control" name="tahun" required>
                                 </div>
                             </div>
                             <div class="form-group">

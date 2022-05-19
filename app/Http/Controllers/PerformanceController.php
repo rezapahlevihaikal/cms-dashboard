@@ -58,8 +58,9 @@ class PerformanceController extends Controller
                 'target' => 'required',
                 'pencapaian'=>'required',
                 'value' => 'required',
-                'bulan'=>'required',
-                'tahun'=>'required',
+                'tanggal' => 'required',
+                'bulan' => 'required',
+                'tahun' => 'required',
             ]);
     
                 $performance = new Performances();
@@ -68,6 +69,7 @@ class PerformanceController extends Controller
                 $performance->target = $request->target;
                 $performance->pencapaian = $request->pencapaian;
                 $performance->value = $request->value;
+                $performance->tanggal = $request->tanggal;
                 $performance->bulan = $request->bulan;
                 $performance->tahun = $request->tahun;
                 $performance->save();
@@ -131,6 +133,7 @@ class PerformanceController extends Controller
                 'target' => $request->target,
                 'pencapaian' => $request->pencapaian,
                 'value' => $request->value,
+                'tanggal' => $request->value,
                 'bulan' => $request->bulan,
                 'tahun' => $request->tahun
             ]);

@@ -26,8 +26,12 @@
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('dashboard') }}">Dashboard</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="{{ route('cms') }}">CMS Alexa</a>
+                        <li class="nav-item dropdown">
+                            <a href="#" class="nav-link dropdown-toggle" data-bs-toggle="dropdown">Ranks</a>
+                            <div class="dropdown-menu">
+                                <a href="{{ route('cms') }}" class="dropdown-item">Smiliarweb Rank</a>
+                                <a href="{{ route('indexRanks') }}" class="dropdown-item">Social Media</a>
+                            </div>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="{{ route('events') }}">Events</a>

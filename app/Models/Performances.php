@@ -17,6 +17,8 @@ class Performances extends Model
         'core_bisnis',
         'target',
         'pencapaian',
+        'value',
+        'tanggal',
         'bulan',
         'tahun'
     ];
