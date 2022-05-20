@@ -109,16 +109,25 @@ Route::get('/socialmedia-ranks', [SocialMediaController::class, 'index'])->name(
 Route::prefix('youtube')->group(function(){
     Route::get('addYoutubeRanks', [SocialMediaController::class, 'addYoutube'])->name('addYoutube');
     Route::post('storeYoutubeRanks', [SocialMediaController::class, 'storeYoutube'])->name('storeYoutube');
+    Route::get('editYoutubeRanks/{id}', [SocialMediaController::class, 'editYoutube'])->name('editYoutube');
+    Route::post('updateYoutubeRanks/{id}', [SocialMediaController::class, 'updateYoutube'])->name('updateYoutube');
+    Route::post('deleteYoutubeRanks/{id}', [SocialMediaController::class, 'deleteYoutube'])->name('deleteYoutube');
 });
 
 Route::prefix('tiktok')->group(function(){
     Route::get('addTiktokRanks', [SocialMediaController::class, 'addTiktok'])->name('addTiktok');
     Route::post('storeTiktokRanks', [SocialMediaController::class, 'storeTiktok'])->name('storeTiktok');
+    Route::get('editTitokRanks/{id}', [SocialMediaController::class, 'editTiktok'])->name('editTiktok');
+    Route::post('updateTiktokRanks/{id}', [SocialMediaController::class, 'updateTiktok'])->name('updateTiktok');
+    Route::post('deleteTiktokRanks/{id}', [SocialMediaController::class, 'deleteTiktok'])->name('deleteTiktok');
 });
 
 Route::prefix('instagram')->group(function(){
     Route::get('addInstagramRanks', [SocialMediaController::class, 'addInstagram'])->name('addInstagram');
     Route::post('storeInstagramRanks', [SocialMediaController::class, 'storeInstagram'])->name('storeInstagram');
+    Route::get('editInstagramRanks/{id}', [SocialMediaController::class, 'editInstagram'])->name('editInstagram');
+    Route::post('updateInstagramRanks/{id}', [SocialMediaController::class, 'updateInstagram'])->name('updateInstagram');
+    Route::post('deleteInstagramRanks/{id}', [SocialMediaController::class, 'deleteInstagram'])->name('deleteInstagram');
 });
 
 

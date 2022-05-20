@@ -1,10 +1,9 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tambah Data</title>
+    <title>Edit Data</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script> 
 </head>
 <nav class="navbar navbar-light navbar-expand-lg mb-5" style="background-color: #e3f2fd;">
@@ -57,64 +56,49 @@
         <div class="row">
             <div class="col">
                 <div class="card">
-                    <div class="card-header">Tambah Data</div>
+                    <div class="card-header">Edit Data Rank - Instagram</div>
                     <div class="card-body">
-                        <form action="{{route('cms.store')}}" method="post" enctype="multipart/form-data">
+                        <form action="{{route('updateInstagram', $dataInstagram->id)}}" method="post" enctype="multipart/form-data">
                             @csrf
                             <div class="row">
-                                <div class="col-12">
-                                    <p>Tanggal</p>
-                                    <input id="startDate" class="form-control" type="date" name="tanggal" required/>
-                                    <span id="dateSelected"></span>
-                                </div>
-                            </div>
-                            <div class="row" style="padding-top: 10px">
                                 <div class="col">
                                     <p>Warta Ekonomi</p>
-                                    <input type="text" class="form-control" aria-label="" name="we" required>
-                                  </div>    
-                                <div class="col">
-                                    <p>HerStory</p>
-                                    <input type="text" class="form-control" aria-label="" name="hs" required>
+                                    <input id="startDate" class="form-control" type="text" name="ig_we_rank" required value="{{$dataInstagram->ig_we_rank}}"/>
                                 </div>
                                 <div class="col">
-                                  <p>Populis</p>
-                                  <input type="text" class="form-control" aria-label="" name="populis" required>
+                                    <p>HerStory</p>
+                                    <input id="startDate" class="form-control" type="text" name="ig_hs_rank" required value="{{$dataInstagram->ig_hs_rank}}"/>
+                                </div>
+                                <div class="col">
+                                    <p>Populis</p>
+                                    <input id="startDate" class="form-control" type="text" name="ig_populis_rank" required value="{{$dataInstagram->ig_populis_rank}}"/>
                                 </div>
                                 <div class="col">
                                     <p>Konten Jatim</p>
-                                    <input type="text" class="form-control" aria-label="" name="konten_jatim" required>
-                                </div>
-                                <div class="col">
-                                    <p>Warta Ekonomi TV</p>
-                                    <input type="text" class="form-control" aria-label="" name="we_tv" required>
+                                    <input id="startDate" class="form-control" type="text" name="ig_konten_jatim_rank" required value="{{$dataInstagram->ig_konten_jatim_rank}}"/>
                                 </div>
                             </div>
                             <div class="row" style="padding-top: 10px">
                                 <div class="col">
-                                  <p>WE Nilai</p>
-                                  <input type="text" class="form-control" aria-label="" name="we_nilai" required>
+                                    <p>Warta Ekonomi (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="ig_we_nilai" required value="{{$dataInstagram->ig_we_nilai}}"/>
                                 </div>
                                 <div class="col">
-                                    <p>HS Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="hs_nilai" required>
+                                    <p>HerStory (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="ig_hs_nilai" required value="{{$dataInstagram->ig_hs_nilai}}"/>
                                 </div>
                                 <div class="col">
-                                    <p>Populis Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="populis_nilai" required>
+                                    <p>Populis (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="ig_populis_nilai" required value="{{$dataInstagram->ig_populis_nilai}}"/>
                                 </div>
                                 <div class="col">
-                                    <p>Konen Jatim Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="konten_jatim_nilai" required>
-                                </div>
-                                <div class="col">
-                                    <p>WE TV Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="tv_nilai" required>
+                                    <p>Konten Jatim (Nilai)</p>
+                                    <input id="startDate" class="form-control" type="text" name="ig_konten_jatim_nilai" required value="{{$dataInstagram->ig_konten_jatim_nilai}}"/>
                                 </div>
                             </div>
                             <div class="form-group">
                                 <br>
-                                <button onclick="window.location='{{url('/cms')}}'" class="btn btn-outline-success" type="button" >Back</button>
+                                <button onclick="window.location='{{url('/socialmedia-ranks')}}'" class="btn btn-outline-success" type="button" >Back</button>
                                 <button type="submit" class="btn btn-outline-primary">Submit</button>
                             </div>
                         </form>
@@ -124,4 +108,4 @@
         </div>
     </div>
 </body>
-</html> 
+</html>

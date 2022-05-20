@@ -79,9 +79,11 @@
                             <th>Warta Ekonomi</th>
                             <th>HerStory</th>
                             <th>Populis</th>
+                            <th>Konten Jatim</th>
                             <th>Nilai (WE)</th>
                             <th>Nilai (HS)</th>
                             <th>Nilai (Populis)</th>
+                            <th>Nilai (Konten Jatim)</th>
                             <th>Last Update</th>
                             <th>Actions</th>
                         </tr>
@@ -93,9 +95,11 @@
                                 <td>{{$item->we}}</td>
                                 <td>{{$item->hs}}</td>
                                 <td>{{$item->populis}}</td>
+                                <td>{{$item->konten_jatim}}</td>
                                 <td>{{$item->we_nilai}}</td>
                                 <td>{{$item->hs_nilai}}</td>
                                 <td>{{$item->populis_nilai}}</td>
+                                <td>{{$item->konten_jatim_nilai}}</td>
                                 <td>{{$item->lastupdate}}</td>
                                 <td>
                                     <form action="{{route('cms.destroy', $item->id)}}" method="post">

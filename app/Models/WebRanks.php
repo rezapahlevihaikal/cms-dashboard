@@ -16,13 +16,13 @@ class WebRanks extends Model
         'we', 
         'hs', 
         'populis', 
-        'topcore',
+        'konten_jatim',
         'lastupdate',
         'we_tv', 
         'we_nilai',
         'hs_nilai',
         'populis_nilai',
-        'tc_nilai',
+        'konten_jatim_nilai',
         'tv_nilai'
     ];
 

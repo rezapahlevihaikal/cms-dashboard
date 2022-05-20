@@ -83,8 +83,8 @@
                                   <input type="text" class="form-control" aria-label="" name="populis" value="{{$dataCms->populis}}">
                                 </div>
                                 <div class="col">
-                                    <p>Topcore</p>
-                                    <input type="text" class="form-control" aria-label="" name="topcore" value="{{$dataCms->topcore}}">
+                                    <p>Konten Jatim</p>
+                                    <input type="text" class="form-control" aria-label="" name="konten_jatim" value="{{$dataCms->konten_jatim}}">
                                 </div>
                                 <div class="col">
                                     <p>Warta Ekonomi TV</p>
@@ -105,8 +105,8 @@
                                     <input type="text" class="form-control" aria-label="" name="populis_nilai" value="{{$dataCms->populis_nilai}}">
                                 </div>
                                 <div class="col">
-                                    <p>Topcore Nilai</p>
-                                    <input type="text" class="form-control" aria-label="" name="tc_nilai" value="{{$dataCms->tc_nilai}}">
+                                    <p>Konten Jatim Nilai</p>
+                                    <input type="text" class="form-control" aria-label="" name="konten_jatim_nilai" value="{{$dataCms->konten_jatim_nilai}}">
                                 </div>
                                 <div class="col">
                                     <p>WE TV Nilai</p>

@@ -6,6 +6,7 @@
     <link rel="stylesheet" href="https://cdn.datatables.net/1.11.5/css/dataTables.bootstrap5.min.css">
     <link rel="stylesheet" href="https://cdn.datatables.net/responsive/2.2.9/css/responsive.bootstrap5.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.8.0/Chart.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> 
 
@@ -104,11 +105,18 @@
                                                     <td>{{$item->yt_populis_nilai}}</td>
                                                     <td>{{$item->yt_konten_jatim_nilai}}</td>
                                                     <td>
-                                                        <form action="{{ route('performance.destroy', $item->id) }}" method="post">
-                                                            @csrf
-                                                            @method('post')
-                                                           <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">Hapus</button>
-                                                        </form>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-primary" onclick="window.location='{{route('editYoutube', $item->id)}}'">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+                                                            <form action="{{ route('deleteYoutube', $item->id) }}" method="post">
+                                                                @csrf
+                                                                @method('post')
+                                                               <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">
+                                                                <i class="fa fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -160,11 +168,18 @@
                                                     <td>{{$item->tiktok_populis_nilai}}</td>
                                                     <td>{{$item->tiktok_konten_jatim_nilai}}</td>
                                                     <td>
-                                                        <form action="{{ route('performance.destroy', $item->id) }}" method="post">
-                                                            @csrf
-                                                            @method('post')
-                                                           <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">Hapus</button>
-                                                        </form>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-primary" onclick="window.location='{{route('editTiktok', $item->id)}}'">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+                                                            <form action="{{ route('deleteTiktok', $item->id) }}" method="post">
+                                                                @csrf
+                                                                @method('post')
+                                                               <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">
+                                                                <i class="fa fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             @endforeach
@@ -215,11 +230,18 @@
                                                     <td>{{$item->ig_populis_nilai}}</td>
                                                     <td>{{$item->ig_konten_jatim_nilai}}</td>
                                                     <td>
-                                                        <form action="{{ route('performance.destroy', $item->id) }}" method="post">
-                                                            @csrf
-                                                            @method('post')
-                                                           <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">Hapus</button>
-                                                        </form>
+                                                        <div class="btn-group" role="group" aria-label="Basic example">
+                                                            <button type="button" class="btn btn-primary" onclick="window.location='{{route('editInstagram', $item->id)}}'">
+                                                                <i class="fa fa-edit"></i>
+                                                            </button>
+                                                            <form action="{{ route('deleteInstagram', $item->id) }}" method="post">
+                                                                @csrf
+                                                                @method('post')
+                                                               <button type="submit" class="btn btn-danger" onclick="return confirm('Apakah anda yakin?');">
+                                                                <i class="fa fa-trash"></i>
+                                                                </button>
+                                                            </form>
+                                                        </div>
                                                     </td>
                                                 </tr>
                                             @endforeach

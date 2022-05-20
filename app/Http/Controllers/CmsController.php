@@ -48,13 +48,13 @@ class CmsController extends Controller
                 'we'=>$request->we,
                 'hs'=>$request->hs,
                 'populis'=>$request->populis,
-                'topcore'=>$request->topcore,
+                'konten_jatim'=>$request->konten_jatim,
                 'lastupdate'=>Carbon::now(),
                 'we_tv'=>$request->we_tv,
                 'we_nilai'=>$request->we_nilai,
                 'hs_nilai'=>$request->hs_nilai,
                 'populis_nilai'=>$request->populis_nilai,
-                'tc_nilai'=>$request->tc_nilai,
+                'konten_jatim_nilai'=>$request->konten_jatim_nilai,
                 'tv_nilai'=>$request->tv_nilai
             ]);
     
@@ -94,13 +94,13 @@ class CmsController extends Controller
                 'we'=>$request->we,
                 'hs'=>$request->hs,
                 'populis'=>$request->populis,
-                'topcore'=>$request->topcore,
+                'konten_jatim'=>$request->konten_jatim,
                 'lastupdate'=>Carbon::now(),
                 'we_tv'=>$request->we_tv,
                 'we_nilai'=>$request->we_nilai,
                 'hs_nilai'=>$request->hs_nilai,
                 'populis_nilai'=>$request->populis_nilai,
-                'tc_nilai'=>$request->tc_nilai,
+                'konten_jatim_nilai'=>$request->konten_jatim_nilai,
                 'tv_nilai'=>$request->tv_nilai
             ]);
 
