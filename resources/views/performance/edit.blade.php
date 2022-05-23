@@ -80,6 +80,7 @@
                                             <option value="Award WE">Award WE</option>
                                             <option value="Seminar Banking">Seminar Banking</option>
                                             <option value="Programatic WE">Programatic WE</option>
+                                            <option value="Youtube WE">Youtube WE</option>
                                             <option value="WEA">WEA</option>
                                             <option value="Iklan HS">Iklan HS</option>
                                             <option value="Award HS">Award HS</option>
