@@ -68,7 +68,7 @@
                                         <option value="WE">WE</option>
                                         <option value="HS">HS</option>
                                         <option value="POPULIS">POPULIS</option>
-                                        <option value="Q1 Ide">Q1</option>
+                                        <option value="Q1 Ide">Q1 ide</option>
                                         <option value="Q1 Revitalisasi">Q1 Revitalisasi</option>
                                     </select>
                                   </div>    
